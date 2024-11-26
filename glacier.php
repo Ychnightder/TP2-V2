@@ -5,7 +5,6 @@ require_once 'glace.php';
 debug($_POST);
 $glace = new Glace();
 debug((array)$glace);
-echo "le tarif est de " . $glace->getTarifParfum().  " " . "€".PHP_EOL ;
 // ça fait réfléchir
 if(isset($_POST)) {
     foreach ($_POST as $maValeur => $value) {
@@ -28,7 +27,8 @@ if(isset($_POST)) {
     }
 }
 $total = $glace->getAddition();
-echo "Le total  est de : " . $total . "€" . PHP_EOL;
+echo "le tarif du parfum est de " . $glace->getTarifParfum().  " " . "€".PHP_EOL  . "Le total de votre choix est de : " . $total . "€" .PHP_EOL;
+
 
 require_once 'footer.php';
 //Il est où le bonheur, il est où. Il est pas là... :(
