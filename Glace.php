@@ -28,13 +28,13 @@ class Glace {
         return $this->addition;
   }
 
-  public function ajoutParfum(): float{
-      return $this->addition + $this->getTarifParfum();
+  public function ajoutParfum(): void{
+       $this->addition += $this->getTarifParfum();
   }
-  public function ajoutTopping(): float{
-      return $this->addition + $this->getTarifTopping();
+  public function ajoutTopping(): void{
+       $this->addition += $this->getTarifTopping();
   }
-  public function ajoutCornet(): float{
-      return $this->addition + $this->getTarifCornet();
+  public function ajoutCornet(): void{
+       $this->addition += $this->getTarifCornet();
   }
 }
